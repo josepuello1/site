@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+}
+
+.headercontainer {
+    background-color: #091a2b;
+    width: 100%;
+    height: 900px;
+     
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    font-family: didot;
+}
+
+.header{
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.right-links{
+    padding: 0px;
+    gap: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -20px;
+
+}
+
+.middle-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
