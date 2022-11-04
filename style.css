@@ -17,22 +17,31 @@ body, html {
     flex-direction: column;
 } */
 
- .headercontainerwrapper{
-}
+  /* .headerbackground{
+    border: 5px black solid;
+    background-image: url(world.jpg);
+    background-size: cover;
+    height: 600px;
+    width: 500px;
+    
+}  */
 
 
 .headercontainer {
+    /* z-index: 9; */
     display: flex;
     flex-direction: column;
-    background-color: #091a2b;
     /* background-color: #091a2b; */
-    background-image: url(supplychain.jpeg);
+    /* background-color: #091a2b; */
+    background-image: url(supplychain.jpeg); 
+    background-image: url(world.jpg); 
+    /* background-blend-mode: multiply; */
     background-position-x: right;
     background-repeat: no-repeat;
     /* background-position: right;  */
     /* background-attachment: fixed; */
-    /* background-size:cover; */
-    height: 600px;
+    background-size:cover; 
+    height: 800px;
     /* position: absolute; */
     width: max-content;
     min-width: 100%;
@@ -40,7 +49,7 @@ body, html {
 
 }
 
-a {
+.middle-links > a {
     text-decoration: none;
     color: white;
     font-size: 22px;
@@ -55,6 +64,12 @@ a {
     color: white;
 }
 
+.right-links > a{
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
 .right-links{
     padding: 0px;
     gap: 10px;
@@ -62,7 +77,6 @@ a {
     justify-content: space-evenly;
     align-items: center;
     margin-top: -100px;
-
 }
 
 .middle-links {
@@ -77,18 +91,22 @@ a {
 .intro-container{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    /* border: 5px black solid; */
 }
 
 .intro-text-container {
     display: inline-block;
     color: white;
     font-family: monospace;
-    margin-left: 30px;
+
+
 }
 
 .intro-text {
-    margin-top: 100px;
-    margin-right: 500px;
+    /* margin-right: 400px; */
     background: rgba(224, 224, 232, 0.256);
     /* background: rgba(194, 194, 202, 0.568); */
     color: rgb(249, 244, 244);
@@ -119,19 +137,12 @@ a {
     width: 480px;
 }
 
-.intro-subtext{
-    width: 400px;
-    font-size: 20px;
-    margin-top: 10px;
-}
 
 .intro-button{
     display: flex;
     align-items: center;
     width: 200px;
     border-radius: 20px;
-    margin-left: 200px;
-    margin-top: 30px;
     
 }
 
@@ -142,7 +153,7 @@ a {
   background-color: rgba(100, 148, 237, 0.563);
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
   border: 1px white solid;
-  border-radius: 4px;
+  border-radius: 20px;
   border-style:double;
   box-sizing: border-box;
   color: #fff;
@@ -166,7 +177,6 @@ a {
   -webkit-user-select: none;
   touch-action: manipulation;
   width: 200px;
-  margin-top: 50px;
 }
 
 .magnifying-glass{
@@ -188,34 +198,174 @@ a {
 
 .intro-content-wrapper{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin-top: 30px;
 }
 
-.intro-header-text{
+.intro-content{
+    /* border: 5px black solid; */
     display: flex;
-    justify-content: left;
+    flex-direction:row ;
+    margin-top: 10px;
     align-items: center;
+    justify-content: space-around;
 }
 
-.subtext2{
-    font-size: 60px;
-    width: 800px;
+.intro-subtext > a {
+    text-decoration: none;
+    color: black;
+}
+.intro-subtext{
+    /* border: 5px black solid; */
+    font-size: 70px;
+    width: 1000px;
+    height: 400px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 10px;
 }
 
 .subheading-years{
+    font-size: 80px;
     font-weight: 800;
+    
 }
 
-.gear-image{
-    width: 500px;
+.teamwork-image{
+    display: block;
+    width: 1200px;
+    /* box-shadow: 0 10px 1000px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 1));
+     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 1));
 }
 
-.gear-image-container{
+.teamwork-image-container{
     /* background-color: #091a2b; */
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     /* border: 5px black solid; */
 }
 
+.teamwork-image-container:hover .teamwork-image-overlay {
+    opacity: 0.8;
+  }
+.teamwork-image-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%; 
+    opacity: 0;
+    transition: 0.3s ease-in;
+    background-color: #000000;
+}
+
+.text {
+    color: white;
+    font-size: 32px;
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.intro-subtext2-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* border: 5px black solid; */
+    background-color: #4d4e4f32;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+
+  }
+  
+.intro-subtext2{
+    /* border: 3px black solid; */
+    /* display: block; */
+    /* margin-top: 100px; */
+    display: flex;
+    align-items: center;
+    font-style: italic;
+    font-size: 50px;
+    width: 700px;
+    height: 600px;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.subtext2-image{
+    width: 350px;
+    height: 350px;
+}
+
+.industry-container{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: center;
+    border: 5px black solid;
+}
+
+.industry-header-text{
+    font-size: 70px;
+    margin-left: 100px;
+}
+
+.industries-content{
+    width: 1100px;
+    height: 500px;
+    /* border: 5px black solid; */
+    display: grid;
+    column-gap: 50px;
+}
+
+.grid-item{
+    border: 5px black solid;
+    width: 350px;
+
+
+}
+.dairy{
+    grid-column: 1/3;
+    grid-row:1;
+}
+.dairy-image{
+    width: 350px;
+    height: auto;
+}
+.dairy-description-container{
+    padding: 4px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+.dairy-description{
+    /* border: 5px black solid; */
+    display: block;
+    justify-content: right;
+    align-items: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+
+}
+.dairy-title{
+    font-weight: 500px;
+    font-size: 44px;
+}
+
+
+.crop{
+    grid-column: 2/3;
+    grid-row:1;
+}
+.paper{
+    grid-column: 3/3;
+    grid-row:1;
+}
