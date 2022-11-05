@@ -97,13 +97,15 @@ body, html {
     flex-direction: column;
     /* justify-content: center;
     align-items: center; */
-    margin-left: 110px;
-    margin-top: 200px;
+    margin-left: 60px;
+    margin-top: 165px;
     /* border: 5px black solid; */
+    /* border: 5px solid black; */
 }
 
 .intro-text-container {
-    display: inline-block;
+    display: flex;
+    /* border: 5px black solid; */
     color: white;
     font-family: 'Open Sans Condensed', sans-serif;
 }
@@ -120,12 +122,12 @@ body, html {
     padding: 5px 20px;
     border-radius: 10%;
     /* border: 5px black solid; */
-    width: max-content;  
+    /* width: max-content;   */
     
 }
 
 .heading-title{
-    font-size: 50px ;
+    font-size: 65px ;
     font-weight: 500;
 }
 .years-heading{
@@ -135,9 +137,35 @@ body, html {
     font-weight: 800;
 }
 
+/* .intro-subtext-container{
+    border: 5px rgb(255, 255, 255) solid;
+    margin-top: 150px;
+    margin-left: 50px;
+    width: 600px;
+    height: 200px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: center;
+} */
+
+.heading-subtitle{
+    margin-top: 120px;
+    color: white;
+    font-size: 40px;
+    /* border: 5px black solid; */
+    height: 100px;
+    /* text-align: left; */
+    /* border: 5px black solid;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
 .middle-break-container{
     /* border: 5px black solid; */
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%
@@ -145,24 +173,38 @@ body, html {
 
 .middle-break-text{
     /* border: 5px black solid; */
-    /* background-color: azure; */
-    background: rgba(224, 224, 232, 0.256); 
-    width: 900px;
-    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 150px;
     margin-top: 50px;
     text-align: center;
-    font-size: 36px;
     font-family: 'Open Sans Condensed', sans-serif;
+    gap: 10px;
+}
+.middle-break-span1{
+    color: rgb(3, 20, 116);
+    font-size: 36px;
+}
+.middle-break-span2{
+    width: 800px;
+    font-size: 24px;
+    /* border: 5px black solid; */
 }
 .middle-button-container{
     margin-top: 30px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     gap: 30px;
     /* border: 5px black solid; */
     width: 800px;
 }
+.startup-image{
+    width: 800px;
+    height: auto;
+} 
 .subtext2{
     font-size: 46px;
     width: 480px;
@@ -348,7 +390,7 @@ body, html {
 }
 
 .industry-container{
-    background-image: url(port-de-barcelona-night.jpg);
+    /* background-image: url(containers.png); */
     background-size: cover;
     padding: 30px 30px;
     margin-top: 100px;
@@ -379,15 +421,15 @@ body, html {
 .grid-item{
     /* border: 5px black solid; */
     position: relative;
-    height: 400px;
-    width: 350px;
+    height: 250px;
+    width: 300px;
     display: flex;
     flex-direction: column;
-    background-color: rgb(204, 202, 202);
+    background-color: rgb(255, 255, 255);
     border-radius: .4rem;
     box-shadow: 0 3rem 6rem rgba(0, 0, 0, .1);
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 .dairy1{
     grid-column: 1/3;
@@ -403,7 +445,8 @@ body, html {
     height: 180px;
 }
 .description-container{
-    padding: 30px 30px;
+    /* border: 5px black solid; */
+    padding: 10px 50px; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -412,15 +455,17 @@ body, html {
     gap: 16px;
     height: 150px;
 }
-.dairy-description{
-    /* border: 5px black solid; */
+/* .dairy-description{
+    border: 5px black solid; 
     display: block;
     justify-content: right;
     align-items: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 
-}
+} */
 .industry-title{
+    /* background-color: rgb(17, 16, 16); */
+    color: rgb(0, 0, 0);
     text-align: center;
     font-weight: 500px;
     font-size: 30px;
@@ -428,15 +473,66 @@ body, html {
     /* border: 5px black solid; */
 }
 
+.dairy{
+    background-image: url("Dairy.jpg");
+    background-size: cover;
+}
 
 .crop{
+    background-image: url("Crop.jpg");
+    background-size: cover;
     grid-column: 2/3;
     grid-row:1;
 }
 .paper{
+    background-image: url("paper.jpg");
+    background-size: cover;
     grid-column: 3/3;
     grid-row:1;
 }
+
+.packaging{
+    background-image: url("packaging.png");
+    background-size: cover;
+    grid-column: 1/3;
+    grid-row:2;
+}
+
+.chemicals{
+    background-image: url("Chemicals.jpg");
+    background-size: cover;
+    grid-column: 2/3;
+    grid-row:2;
+}
+
+.activeingredients{
+    background-image: url("pharma.jpg");
+    background-size: cover;
+    grid-column: 3/3;
+    grid-row:2;
+}
+
+.resin{
+    background-image: url("plastic.jpg");
+    background-size: cover;
+    grid-column: 1/3;
+    grid-row:3;
+}
+
+.construction{
+    background-image: url("construction.jpg");
+    background-size: cover;
+    grid-column: 2/3;
+    grid-row:3;
+}
+
+.machinery{
+    background-image: url("machinery.jpg");
+    background-size: cover;
+    grid-column: 3/3;
+    grid-row:3;
+}
+
 
 .button-container{
     bottom: 10px;
@@ -483,3 +579,5 @@ body, html {
     top: 2px;
 }
   
+.dairy-title{
+}
